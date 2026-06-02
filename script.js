@@ -1,14 +1,9 @@
-alert("JS CARGADO");
+menuBtn.onclick = function(){
 
-const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementById("menu");
+    alert("CLICK");
 
-alert("BOTON: " + menuBtn);
-alert("MENU: " + menu);
+    menu.classList.toggle("activo");
 
-if(menuBtn && menu){
-    menuBtn.onclick = function(){
-        alert("CLICK");
-        menu.classList.toggle("activo");
-    };
-}
+    alert(menu.className);
+
+};
