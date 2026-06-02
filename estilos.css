@@ -178,29 +178,83 @@ section{
 #nosotros p{
     font-size:1.1rem;
 }
+/* GALERÍA MODERNA */
 
-/* GALERÍA */
 .galeria{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px,1fr));
+
     gap:20px;
+
+    max-width:1200px;
+
+    margin:auto;
+
 }
 
 .galeria img{
-    width:250px;
-    height:250px;
+
+    width:100%;
+
+    height:300px;
+
     object-fit:cover;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
-    transition:0.4s;
+
+    border-radius:20px;
+
     cursor:pointer;
+
+    transition:0.4s;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.15);
+
 }
 
 .galeria img:hover{
-    transform:scale(1.08);
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.25);
+
+}
+.galeria img{
+
+    filter:brightness(95%);
+
 }
 
+.galeria img:hover{
+
+    filter:brightness(105%);
+}
+.propaganda-img{
+    display:block;
+    margin:10px auto;
+    max-width:250px;
+    width:70%;
+    height:auto;
+}
+.oculto{
+    opacity:0;
+    transform:translateY(-100%);
+    pointer-events:none;
+}
+header.oculto{
+    transform: translateY(-100%);
+    transition: 0.4s;
+}
+header{
+    transition:0.4s;
+}
+
+.propaganda-img{
+    transition:0.4s;
+}
 /* CONTACTO */
 #contacto{
     text-align:center;
@@ -305,4 +359,127 @@ footer{
         max-width:320px;
         height:auto;
     }
+}
+.resenas{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.resena{
+    background:white;
+    width:280px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+}
+
+.resena:hover{
+    transform:translateY(-8px);
+}
+.destacado{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.destacado img{
+    width:300px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+.card,
+.resena,
+.galeria img{
+    animation:aparecer 1s ease;
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+.visor{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:5000;
+}
+
+.visor img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+}
+
+#cerrar{
+    position:absolute;
+    top:20px;
+    right:40px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+/* BOTÓN HAMBURGUESA */
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    font-size:30px;
+    cursor:pointer;
+    color:#6b2d2d;
+    margin-top:10px;
+}
+
+/* CELULARES */
+
+@media(max-width:768px){
+
+    .menu-btn{
+        display:block;
+        margin:10px auto;
+    }
+
+    nav{
+        display:none;
+        flex-direction:column;
+        gap:15px;
+        margin-top:15px;
+    }
+
+    nav.activo{
+        display:flex;
+    }
+
+}
+.eslogan{
+    text-align:center;
+    padding:30px 20px;
+    background:#ffb6c1;
+}
+
+.propaganda-img{
+    max-width:350px;
+    width:100%;
+    border-radius:15px;
 }
