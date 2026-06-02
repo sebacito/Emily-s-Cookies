@@ -96,6 +96,104 @@ section{
 .titulo{
     text-align:center;
     color:#6b2d2d;
+    margin-bottom:40px;/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* GENERAL */
+body{
+    background-color:#fff5f7;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background-color:#ffb6c1;
+    text-align:center;
+    padding:20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1{
+    color:#6b2d2d;
+    margin-bottom:10px;
+}
+
+#frase{
+    color:#6b2d2d;
+    font-style:italic;
+    margin-bottom:10px;
+}
+
+/* MENÚ */
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#6b2d2d;
+    margin:0 15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h2{
+    font-size:3rem;
+    color:#6b2d2d;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+}
+
+/* BOTONES */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 30px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1ebe5d;
+    transform:scale(1.05);
+}
+
+/* SECCIONES */
+section{
+    padding:70px 20px;
+}
+
+.titulo{
+    text-align:center;
+    color:#6b2d2d;
     margin-bottom:40px;
     font-size:2rem;
 }
@@ -470,12 +568,9 @@ footer{
         margin:10px auto;
     }
 
-    nav{
-        display:none;
-        flex-direction:column;
-        gap:15px;
-        margin-top:15px;
-    }
+   nav{
+    display:flex !important;
+}
 
     nav.activo{
         display:flex;
@@ -490,6 +585,9 @@ footer{
 
 .propaganda-img{
     max-width:350px;
+    width:100%;
+    border-radius:15px;
+}
     width:100%;
     border-radius:15px;
 }
