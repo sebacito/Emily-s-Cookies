@@ -78,12 +78,15 @@ cerrar.addEventListener("click", () => {
     visor.style.display = "none";
 
 });
-// MENÚ HAMBURGUESA
-
 const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
 
-menuBtn.addEventListener("click", () => {
+if(menuBtn && menu){
 
-    menu.classList.toggle("activo");
+    menuBtn.addEventListener("click", () => {
 
-});
+        menu.classList.toggle("activo");
+
+    });
+
+}
