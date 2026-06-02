@@ -85,6 +85,7 @@ if(menuBtn && menu){
 
     menuBtn.addEventListener("click", () => {
 
+        alert("boton funciona");
         menu.classList.toggle("activo");
 
     });
